@@ -13,7 +13,7 @@ public class TestRpcClient {
         // 生成代理类
         HelloService helloService = consumerConfig.refer();
         while (true) {
-            System.out.println(helloService.sayHello("world"));
+            System.out.println(helloService.sayHello());
             try {
                 Thread.sleep(2000);
             } catch (Exception e) {

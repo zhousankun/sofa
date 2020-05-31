@@ -29,7 +29,7 @@ import java.util.List;
 public class BookStoreControllerImpl implements BookStoreController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BookStoreControllerImpl.class);
-
+    //这种写法太复杂了，可以考虑整个config文件，然后直接注入bean
     @SofaReference(interfaceType = StockMngFacade.class, binding = @SofaReferenceBinding(bindingType = "bolt"))
     private StockMngFacade stockMngFacade;
 

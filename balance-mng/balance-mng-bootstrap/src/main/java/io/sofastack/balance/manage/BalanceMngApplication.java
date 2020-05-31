@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
  * @since 2019/6/10
  */
 @SpringBootApplication
-@ImportResource({ "classpath:rpc-server-config.xml" })
+//@ImportResource({ "classpath:rpc-server-config.xml" })
 public class BalanceMngApplication {
     public static void main(String[] args) {
         SpringApplication.run(BalanceMngApplication.class, args);
