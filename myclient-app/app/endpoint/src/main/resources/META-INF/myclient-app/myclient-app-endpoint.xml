@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:sofa="http://sofastack.io/schema/sofaboot"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://sofastack.io/schema/sofaboot   http://sofastack.io/schema/sofaboot.xsd"
+       default-autowire="byName">
+
+    <!--引用 SOFARPC 服务-->
+    <!--以下接口名请根据服务提供方的接口全名来指定-->
+    <sofa:reference id="sampleServiceRef" interface="com.alipay.samples.rpc.SampleService">
+        <sofa:binding.bolt>
+<!--            <sofa:global-attrs address-wait-time="5000"/>-->
+            <!--使用直连的方式访问本地启动的 myserver-app, 发布到线上时需要删除此配置项-->
+<!--            <sofa:route target-url="127.0.0.1:12200"/>-->
+        </sofa:binding.bolt>
+    </sofa:reference>
+
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:sofa="http://schema.alipay.com/sofa/schema/slite"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://schema.alipay.com/sofa/schema/slite   http://schema.alipay.com/sofa/slite.xsd"
+       default-autowire="byName">
+
+<!--        RPC 服务引用-->
+<!--     以下接口名请根据服务提供方的接口全名来指定-->
+<!--    <sofa:reference id="sampleServiceRef" interface="com.alipay.samples.rpc.SampleService">-->
+<!--        <sofa:binding.bolt>-->
+<!--            &lt;!&ndash; 等待配置中心返回地址的时间，如果在 5000 ms 内有地址返回的话，等待过程会立马结束 &ndash;&gt;-->
+<!--            <sofa:global-attrs address-wait-time="5000" test-url="127.0.0.1:12201"/>-->
+<!--        </sofa:binding.bolt>-->
+<!--    </sofa:reference>-->
+
+</beans>

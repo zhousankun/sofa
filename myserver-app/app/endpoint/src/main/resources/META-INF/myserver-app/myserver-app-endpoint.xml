@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:sofa="http://sofastack.io/schema/sofaboot"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://sofastack.io/schema/sofaboot   http://sofastack.io/schema/sofaboot.xsd"
+       default-autowire="byName">
+
+    <!-- 发布 SOFARest 服务 -->
+    <!-- 发布 SOFARPC 服务-->
+    <!-- 声明服务的实现对象，以下类全名和接口全名，请根据自己的包名进行指定 -->
+    <bean id="sampleService" class="com.alipay.samples.rpc.impl.SampleServiceImpl"/>
+    <!-- RPC 服务发布 -->
+    <sofa:service ref="sampleService" interface="com.alipay.samples.rpc.SampleService">
+        <sofa:binding.bolt/>
+    </sofa:service>
+
+
+</beans>
